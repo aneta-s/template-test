@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\assets\\fonts"
   ],
-  "SelectedNode": "\\style.css",
   "PreviewInSolutionExplorer": false
 }
