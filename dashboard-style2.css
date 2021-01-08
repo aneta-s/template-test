@@ -1,3 +1,9 @@
+﻿/* reset  ^ added in cog */
+* {
+    box-sizing: border-box;
+    padding: 5px; /* just to see the boxes easier*/
+}
+
 /*SPECIAL FONTS*/
 @font-face {
     font-family: AlvaroCondensed;
@@ -12,119 +18,26 @@
     url("webfont.svg#svgFontName") format("svg"); /* Legacy iOS */
 }
 
-* {
-    box-sizing: border-box;
+/* STICKY SCREEN WHEN SCROLLING ON THE SMARTPHONE
+html, body {
+    width: auto !important;
+    overflow-x: hidden !important
 }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    /*get rid of scrollbar*/
-    overflow-x: hidden;
+.centered {
+    margin: 0 auto;
+    width: 80%;
 }
 
-/* Side Menu*/
-.navbar {
-    background-color: #ffd800;
-    overflow: hidden;
-    height: 63px;
-}
-
-    .navbar a {
-        float: left;
-        display: block;
-        color: #000000;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 16px;
-    }
-
-    .navbar ul {
-        margin: 8px 0 0 0;
-        list-style: none;
-    }
-
-    .navbar a:hover {
-        background-color: #ffffff;
-        color: #000;
-    }
-
-.side-nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    opacity: 0.9;
-    overflow-x: hidden;
-    padding-top: 60px;
-    /*smoothly opening*/
-    transition: 0.5s;
-}
-
-    .side-nav a {
-        padding: 10px 10px 10px 30px;
-        text-decoration: none;
-        font-size: 22px;
-        color: #000000;
-        display: block;
-        transition: 0.3s;
-    }
-
-        .side-nav a:hover {
-            color: #808080;
-        }
-
-    .side-nav .btn-close {
-        position: absolute;
-        top: 0;
-        right: 22px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-#main {
-    transition: margin-left 0.5s;
-    padding: 20px;
-    overflow: hidden;
-    width: 100%;
-
-}
-
-@media(max-width: 568px) {
-    .navbar-nav {
-        display: none
+@media screen and (min-width: 480px) {
+    .centered {
+        margin: 0 auto;
+        width: 95%;
     }
 }
-
-@media(min-width: 568px) {
-    /*.open-slide{display: none
-}*/
-}
-
-/* HTML Elements - How specific is your selector?*/
-#main * {
-    box-sizing: border-box;
-    padding: 5px;
-
-}
-
-/*Color palletes*/
-.w3-half p {
-    height: 48px;
-    padding-top: 14px;
-    text-align: center;
-}
-
-/*page content*/
-textarea {
-    width: 950px;
-    height: 100px;
-}
+*/
 /* utility */
+
 .screen-reader-only {
     position: absolute;
     width: 1px;
@@ -134,31 +47,24 @@ textarea {
     overflow: hidden;
     clip: rect(0,0,0,0);
     border: 0;
-  
 }
-/*structure*/
-/*all display inside body*/
-body .display {
+
+/* structure */
+body {
     width: 98%;
+    /*Remove prebuild browser default CSS, margins gone*/
     max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
     font-family: Raleway, Arial, sans-serif;
     background-color: #d0afcf;
-    font-size: 1em;
+    font-size: 1em; /* Default for the whole page*/
     color: rgb(128, 110, 139);
-}
+} 
 
-.global-font {
-    font-family: Raleway,sans-serif, Arial;
-}
-/*.font {
-    font-family: Raleway, Arial, sans-serif;
-    color: #806E8B;
-}*/
 /* components */
 
-canvas #bar{
+canvas {
     display: block;
     width: 100%;
     height: auto;
@@ -182,6 +88,7 @@ canvas #bar{
         word-break: break-word;
     }
 
+
 @media (min-width: 600px) {
     .card .heading {
         font-size: 1.5em;
@@ -189,16 +96,16 @@ canvas #bar{
 }
 
 /* type */
-.show ol li .card {
+ol li {
     margin-bottom: -20px;
 }
 
-.show ol .card {
+ol {
     padding-left: 0;
     margin-left: 15px;
 }
 
-.list li .card {
+.list li {
     /* Equal to letter-spacing: 140%;*/
     margin-bottom: -30px;
 }
@@ -230,15 +137,18 @@ canvas #bar{
  *  Header
  **********************************************************************/
 
-.site-header  {
+.site-header {
     margin: 20px 0;
-    border: 1px solid black;
+    border: 1px solid black ;
 }
 
-    .site-header h1  {
-        text-transform: uppercase;
-        font-size: 2em;
-        color: rgb(240, 221, 241);
+    .site-header h1 {
+        font-family: Raleway,sans-serif, Arial ;
+        text-transform: uppercase ;
+        font-size: 2em ;
+        /* margin-top: -0.1em;
+margin-bottom: 0.1em; or line-height: default or 150% */
+        color: rgb(240, 221, 241) ;
     }
 
 
@@ -265,7 +175,6 @@ canvas #bar{
     align-items: center;
     justify-content: center;
     margin: 0;
-
     /*     font-size: 0.7em; */
 }
 
@@ -280,12 +189,12 @@ canvas #bar{
     margin-center: auto;
 }
 
-.navigation li {
+li {
     padding: 20px;
 }
 
-.navigation a {
-    color: #F0DDF1;
+a {
+    color: #f5f5f6;
     text-decoration: none;
 }
 
@@ -297,3 +206,24 @@ canvas #bar{
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /*Everythin is responsive, it fill 1fr when it is small*/
     }
 }
+
+
+
+/***********************************************************************
+ *  Footer
+ *********************************************************************
+footer {
+    text-align: center;
+}
+*/
+/*NOTITIES
+1. Figure out your layout with story
+2. Make it respponsive
+3 the resit is fun..
+More links:
+https://paulund.co.uk/how-to-create-shiny-css-buttons
+https://web.dev/responsive-web-design-basics/
+watch kevin powel how to make portfolio with a grid https://www.youtube.com/watch?v=plRcoRqLriw&list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998
+centered .container https://stackoverflow.com/questions/36229356/whats-the-equivalent-of-the-container-bootstrap-class-in-purecss-io */
+
+

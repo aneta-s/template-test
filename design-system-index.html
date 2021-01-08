@@ -1,0 +1,495 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- add meta data -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design system-specificity</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+<link rel="icon" type='image/png' href="http://www.google.com/s2/favicons?domaind=https://aneta.netlify.app/">
+<link rel="preload" href="AlvaroCondensed.woff" as="font" type="font/woff" crossorigin>
+</head>
+<body>
+<nav class="navbar">
+<span class="open-slide">
+<a href="#" onclick="openSlideMenu()">
+<svg width="30" height="30">
+<path d="M0,5 30,5" stroke="#fff" stroke-width="5"></path>
+<path d="M0,14 30,14" stroke="#fff" stroke-width="5"></path>
+<path d="M0,23 30,23" stroke="#fff" stroke-width="5"></path>
+</svg>
+</a>
+</span>
+<ul class="navbar-nav">
+<li> <a href="#">Atoms</a></li>
+<li> <a href="#">Molecules</a></li>
+<li> <a href="#">Organisms</a></li>
+<li> <a href="#">Templates</a></li>
+<li> <a href="#">Pages</a></li>
+</ul>
+</nav>
+<div id="side-menu" class="side-nav">
+<a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+<a href="#">Atoms</a>
+<a href="#">Molecules</a>
+<a href="#">Organisms</a>
+<a href="#">Templates</a>
+<a href="#">Pages</a>
+</div>
+<div id="main">
+<section class="atoms">
+<div>
+<h1> ATOMS</h1>
+<p>Atoms are the basic building blocks of matter. Applied to web interfaces, atoms are our HTML tags, such as a form label, an input or a button.</p>
+<h2> Color palletes</h2>
+<!--<p>Description of the Html element</p>-->
+<div>
+    <div class="w3-row">
+        <div class="w3-half " style="background:#806E8B">
+            <p class="w3-xxlarge">#806E8B</p>
+        </div>
+        <div class="w3-half" style="background:#D0AFCF">
+            <p>#D0AFCF</p>
+        </div>
+        <div class="w3-half" style="background:#F0DDF1">
+            <p class="w3-xxlarge">#F0DDF1</p>
+        </div>
+    </div>
+</div><br />
+<textarea disabled>
+<div class="w3-row">
+    <div class="w3-half " style="background:#806E8B">
+        <p class="w3-xxlarge">#806E8B</p>
+    </div>
+    <div class="w3-half" style="background:#D0AFCF">
+        <p>#D0AFCF</p>
+    </div>
+    <div class="w3-half" style="background:#F0DDF1">
+        <p class="w3-xxlarge">#F0DDF1</p>
+    </div>
+</div>
+</textarea>
+<h2> Typography</h2>
+<!--<p>Description is missing</p>-->
+<div class="global-font">
+<h1>Design is how it works</h1>
+<h2>Design is how it works</h2>
+<h3>Design is how it works</h3>
+<h4>Design is how it works</h4>
+<h5>Design is how it works</h5>
+<h6>Design is how it works</h6>
+</div><br />
+      <textarea disabled>
+<div class="global-font">
+    <h1>Design is how it works</h1>
+    <h2>Design is how it works</h2>
+    <h3>Design is how it works</h3>
+    <h4>Design is how it works</h4>
+    <h5>Design is how it works</h5>
+    <h6>Design is how it works</h6>
+</div>
+</textarea>
+</div>
+</section>
+<section class="molecules">
+<div>
+<h1> MOLECULES</h1>
+<p>Molecules are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems i.e a form label, input or button together.</p>
+<!--<h2> Title of the HTML elementc</h2>
+<p>Description of the Html element</p>
+<div class="display">
+Display data here
+</div><br />
+<textarea disabled>code snippet here...</textarea>-->
+</div>
+</section>
+<section class="organisms">
+<div>
+<h1> ORGANISMS</h1>
+<p>Organisms are groups of molecules joined together to form a relatively complex, distinct section of an interface..</p>
+<h2> Site header</h2>
+<h3>User story</h3>
+<p>The user sees a title and a subtitle with the status of each service, which allows the user to identify any outages at a glance.</p>
+<div class="global-font">
+<header class="site-header">
+    <h3> <em>Sub title of the dashboard</em></h3>
+    <h1>Here comes the main titel about the dashboard you're seeing here below etetra</h1>
+</header>
+</div><br />
+<textarea disabled>  
+<div class="global-font">
+    <header class="site-header">
+        <h3> <em>Sub title of the dashboard</em></h3>
+        <h1>Here comes the main titel about the dashboard you're seeing here below etetra</h1>
+    </header>
+</div></textarea>
+</div>
+<div>
+<h2> Page content</h2>
+<h3>User story</h3>
+<p>The user views a report displaying usage statistics about each page of his/her website. S/he can see which pages are not visited frequently and make improvements.</p>
+<div class="global-font">
+<main class='page-content'>
+<h2 class='screen-reader-only dashboard'>Section should have a heading for screen readers at least</h2>
+    <div class="spotlight container dashboard">
+    <h4>Here comes the titel of the main chart</h4>
+    <canvas id="bar"></canvas>
+</div>
+</main>
+</div><br />
+<textarea disabled> 
+<div class="global-font">
+    <main class='page-content'>
+        <h2 class='screen-reader-only dashboard'>Section should have a heading for screen readers at least</h2>
+        <div class="spotlight container dashboard">
+            <h4>Here comes the titel of the main chart</h4>
+            <canvas id="bar"></canvas>
+        </div>
+    </main>
+</div></textarea>
+</div>
+<div>
+<h2> Card text</h2>
+<h3>User story</h3>
+<p>The user can view up to 6 stats of the plan to check that flow is performing its function. S/he can see a summary of stats suitable for his/her web page using.</p>
+<div class="global-font">
+<div class="grid blue">
+    <div class="card text ">
+        <h4>Here comes title of card </h4>
+        <h1 class="heading">23953</h1>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+    </div>
+</div>
+</div><br />
+<textarea disabled>
+<div class="global-font">
+    <div class="grid blue">
+        <div class="card text ">
+            <h4>Here comes title of card </h4>
+            <h1 class="heading">23953</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+        </div>
+    </div>
+</div></textarea>
+</div>
+<div>
+<h2> Card list</h2>
+<h3>User story</h3>
+<p>The user can see a list of parts suitable for his/her web page so s/he can indicate which pages s/he likes and which thinks need improvement. </p>
+<div class="global-font">
+<div class="grid blue">
+    <div class="card list">
+        <h4>Here comes title of another card, here card number three</h4>
+        <h1 class="heading">Something</h1>
+        <p> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+        <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here' </p>
+    </div>
+</div>
+</div><br />
+<textarea disabled>
+<div class="global-font">
+    <div class="grid blue">
+        <div class="card list">
+            <h4>Here comes title of another card, here card number three</h4>
+            <h1 class="heading">Something</h1>
+            <p> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here' </p>
+        </div>
+    </div>
+</div>
+</textarea>
+</div>
+<div>
+<h2> Navigation</h2>
+<h3>User story</h3>
+<p>The user should be able to contact the administrator of the dashboard without having to search for the contact details on the page. </p>
+<div class="global-font">
+<footer>
+    <ul class="navigation sticky">
+        <li> <a href="">About</a></li>
+        <li> <a href="">Products</a></li>
+        <li> <a href="">Out team</a></li>
+        <li class="push"> <a href="">Contacts</a></li>
+    </ul>
+</footer>
+</div><br />
+<textarea disabled><div class="global-font">
+<footer>
+    <ul class="navigation sticky">
+        <li> <a href="">About</a></li>
+        <li> <a href="">Products</a></li>
+        <li> <a href="">Out team</a></li>
+        <li class="push"> <a href="">Contacts</a></li>
+    </ul>
+</footer>
+</div></textarea>
+</div>
+</section>
+<section class="templates">
+<div>
+<h1>TEMPLATES</h1>
+<p>Templates consist mostly of groups of organisms stitched together to form pages. It’s here where we start to see the design coming together and start seeing things like layout in action.</p>
+<h2> Dashboard template</h2>
+<h3>User story</h3>
+<p>The user should be able to understand the topic through the site header, page content, up to 6 stats and navigation on his/her phone, tablet and desktop without having to look for missing information. </p>
+<div class="global-font">
+<header class="site-header">
+    <h3> <em>Sub title of the dashboard</em></h3>
+    <h1>Here comes the main titel about the dashboard you're seeing here below etetra</h1>
+</header>
+<main class='page-content'>
+    <h2 class='screen-reader-only'>Section should have a heading for screen readers at least</h2>
+    <section class="spotlight container">
+        <h4>Here comes the titel of the main chart</h4>
+        <canvas id="bar"></canvas>
+    </section>
+    <section class="grid blue">
+        <div class="card text">
+            <h4>Here comes title of card </h4>
+            <h1 class="heading">23953</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+        </div>
+        <div class="card list">
+            <h4>Here comes title of another card, here card number three</h4>
+            <h1 class="heading">Something</h1>
+            <p> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here' </p>
+        </div>
+        <div class="card chart radar">
+            <h4>Here comes title of another card, here box number three </h4>
+            <div class="container">
+                <canvas id="radar"></canvas>
+            </div>
+            <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+        </div>
+        <div class="card chart polarArea">
+            <h4>Here comes title of another card, here box number three </h4>
+            <div class="container">
+                <canvas id="polarArea"></canvas>
+            </div>
+            <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+        </div>
+        <div class="card poster">
+            <h4>Here comes a short titel</h4>
+            <h1 class="heading">Here comes something</h1>
+            <p>Ipsum as their default model text</p>
+        </div>
+        <div class="card chart horizontalBar">
+            <h4>Intermediairs/werkgevers met de meesta aanbod vacatures</h4>
+            <div class="container">
+                <canvas id="horizontalBar"></canvas>
+            </div>
+            <p>Ipsum as their default model text</p>
+        </div>
+    </section>
+    <footer>
+        <ul class="navigation sticky">
+            <li> <a href="">About</a></li>
+            <li> <a href="">Products</a></li>
+            <li> <a href="">Out team</a></li>
+            <li class="push"> <a href="">Contacts</a></li>
+        </ul>
+    </footer>
+</main>
+</div><br />
+<textarea disabled>
+<div class="global-font">
+    <header class="site-header">
+        <h3> <em>Sub title of the dashboard</em></h3>
+        <h1>Here comes the main titel about the dashboard you're seeing here below etetra</h1>
+    </header>
+    <main class='page-content'>
+        <h2 class='screen-reader-only'>Section should have a heading for screen readers at least</h2>
+        <section class="spotlight container">
+            <h4>Here comes the titel of the main chart</h4>
+            <canvas id="bar"></canvas>
+        </section>
+        <section class="grid blue">
+            <div class="card text">
+                <h4>Here comes title of card </h4>
+                <h1 class="heading">23953</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+            </div>
+            <div class="card list">
+                <h4>Here comes title of another card, here card number three</h4>
+                <h1 class="heading">Something</h1>
+                <p> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here' </p>
+            </div>
+            <div class="card chart radar">
+                <h4>Here comes title of another card, here box number three </h4>
+                <div class="container">
+                    <canvas id="radar"></canvas>
+                </div>
+                <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+            </div>
+            <div class="card chart polarArea">
+                <h4>Here comes title of another card, here box number three </h4>
+                <div class="container">
+                    <canvas id="polarArea"></canvas>
+                </div>
+                <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+            </div>
+            <div class="card poster">
+                <h4>Here comes a short titel</h4>
+                <h1 class="heading">Here comes something</h1>
+                <p>Ipsum as their default model text</p>
+            </div>
+            <div class="card chart horizontalBar">
+                <h4>Intermediairs/werkgevers met de meesta aanbod vacatures</h4>
+                <div class="container">
+                    <canvas id="horizontalBar"></canvas>
+                </div>
+                <p>Ipsum as their default model text</p>
+            </div>
+        </section>
+        <footer>
+            <ul class="navigation sticky">
+                <li> <a href="">About</a></li>
+                <li> <a href="">Products</a></li>
+                <li> <a href="">Out team</a></li>
+                <li class="push"> <a href="">Contacts</a></li>
+            </ul>
+        </footer>
+    </main>
+</div>
+</textarea>
+</div>
+</section>
+<section class="pages">
+<div>
+<h1> PAGES</h1>
+<p>Pages are specific instances of templates. Here, placeholder content is replaced with real representative content to give an accurate depiction of what a user will ultimately see.</p>
+<h2> Dashboard page</h2>
+<h3>User story</h3>
+<p>The user sees a summary with the status of each service in look and feel version, which allows him/her to identify any outages at a glance.</p>
+<div class="display" id="dashboard">
+<header class="site-header">
+    <h3> <em>Sub title of the dashboard</em></h3>
+    <h1>Here comes the main titel about the dashboard you're seeing here below etetra</h1>
+</header>
+<main class='page-content'>
+    <h2 class='screen-reader-only'>Section should have a heading for screen readers at least</h2>
+    <section class="spotlight container">
+        <h4>Here comes the titel of the main chart</h4>
+        <canvas id="bar"></canvas>
+    </section>
+    <section class="grid blue">
+        <div class="card text">
+            <h4>Here comes title of card </h4>
+            <h1 class="heading">23953</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+        </div>
+        <div class="card list">
+            <h4>Here comes title of another card, here card number three</h4>
+            <h1 class="heading">Something</h1>
+            <p> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+            <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here' </p>
+        </div>
+        <div class="card chart radar">
+            <h4>Here comes title of another card, here box number three </h4>
+            <div class="container">
+                <canvas id="radar"></canvas>
+            </div>
+            <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+        </div>
+        <div class="card chart polarArea">
+            <h4>Here comes title of another card, here box number three </h4>
+            <div class="container">
+                <canvas id="polarArea"></canvas>
+            </div>
+            <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+        </div>
+        <div class="card poster">
+            <h4>Here comes a short titel</h4>
+            <h1 class="heading">Here comes something</h1>
+            <p>Ipsum as their default model text</p>
+        </div>
+        <div class="card chart horizontalBar">
+            <h4>Intermediairs/werkgevers met de meesta aanbod vacatures</h4>
+            <div class="container">
+                <canvas id="horizontalBar"></canvas>
+            </div>
+            <p>Ipsum as their default model text</p>
+        </div>
+    </section>
+    <footer class="zone green">
+        <ul class="navigation sticky">
+            <li> <a href="">About</a></li>
+            <li> <a href="">Products</a></li>
+            <li> <a href="">Out team</a></li>
+            <li class="push"> <a href="">Contacts</a></li>
+        </ul>
+    </footer>
+</main>
+</div><br />
+<textarea disabled>
+<div class="display" id="dashboard">
+    <header class="site-header">
+        <h3> <em>Sub title of the dashboard</em></h3>
+        <h1>Here comes the main titel about the dashboard you're seeing here below etetra</h1>
+    </header>
+    <main class='page-content'>
+        <h2 class='screen-reader-only'>Section should have a heading for screen readers at least</h2>
+        <section class="spotlight container">
+            <h4>Here comes the titel of the main chart</h4>
+            <canvas id="bar"></canvas>
+        </section>
+        <section class="grid blue">
+            <div class="card text">
+                <h4>Here comes title of card </h4>
+                <h1 class="heading">23953</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+            </div>
+            <div class="card list">
+                <h4>Here comes title of another card, here card number three</h4>
+                <h1 class="heading">Something</h1>
+                <p> Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here' </p>
+            </div>
+            <div class="card chart radar">
+                <h4>Here comes title of another card, here box number three </h4>
+                <div class="container">
+                    <canvas id="radar"></canvas>
+                </div>
+                <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+            </div>
+            <div class="card chart polarArea">
+                <h4>Here comes title of another card, here box number three </h4>
+                <div class="container">
+                    <canvas id="polarArea"></canvas>
+                </div>
+                <p>Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy</p>
+            </div>
+            <div class="card poster">
+                <h4>Here comes a short titel</h4>
+                <h1 class="heading">Here comes something</h1>
+                <p>Ipsum as their default model text</p>
+            </div>
+            <div class="card chart horizontalBar">
+                <h4>Intermediairs/werkgevers met de meesta aanbod vacatures</h4>
+                <div class="container">
+                    <canvas id="horizontalBar"></canvas>
+                </div>
+                <p>Ipsum as their default model text</p>
+            </div>
+        </section>
+        <footer class="zone green">
+            <ul class="navigation sticky">
+                <li> <a href="">About</a></li>
+                <li> <a href="">Products</a></li>
+                <li> <a href="">Out team</a></li>
+                <li class="push"> <a href="">Contacts</a></li>
+            </ul>
+        </footer>
+    </main>
+</div>
+</textarea>
+</div>
+</section>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
